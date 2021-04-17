@@ -1,4 +1,5 @@
 import y2015.run2015
+import y2016.run2016
 
 fun start(args: Array<String>) {
 //    runSpecific(2015, 1)
@@ -37,7 +38,8 @@ fun getMode(args: Array<String>): Mode {
 fun run(year: Int, day: Int): Pair<String, String>? {
     return when (year) {
         2015 -> run2015(day)
-        in 2016..2020 -> null
+        2016 -> run2016(day)
+        in 2017..2020 -> null
         else -> throw IllegalArgumentException("Invalid year $year")
     }
 }

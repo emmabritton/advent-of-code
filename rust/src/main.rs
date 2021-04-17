@@ -3,12 +3,14 @@ mod runner;
 mod y2015;
 mod specific;
 mod util;
+mod y2016;
 
 use clap::{App, Arg};
 use anyhow::{Result, Context};
 use crate::resources::Resources;
 use crate::runner::run_all;
 use crate::y2015::run_2015;
+use crate::y2016::run_2016;
 use crate::specific::run_specific;
 
 pub type AoCResult = Result<Option<(String, String)>>;
@@ -53,7 +55,8 @@ fn get_mode() -> Mode {
 pub fn run(resources: &Resources, year: usize, day: usize) -> AoCResult {
     match year {
         2015 => run_2015(resources, day),
-        2016..=2020 => Ok(None),
+        2016 => run_2016(resources, day),
+        2015..=2020 => Ok(None),
         _ => unimplemented!()
     }
 }
