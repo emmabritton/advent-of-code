@@ -1,0 +1,9 @@
+{
+  "name": "advent-of-code",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "description": "## Usage",
+  "main": "app.js",
+  "license": "MIT"
+}
