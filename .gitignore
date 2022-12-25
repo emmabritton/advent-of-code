@@ -588,4 +588,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 *.tlog
 
+/resources
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,linux,git,vscode,visualstudio,visualstudiocode,sublimetext,intellij+all
