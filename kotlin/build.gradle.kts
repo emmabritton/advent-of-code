@@ -1,6 +1,6 @@
 plugins {
-    kotlin("multiplatform") version "1.4.21"
-    id("com.github.johnrengelman.shadow") version "6.1.0"
+    kotlin("multiplatform") version "1.7.20"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "me.raybritton"
@@ -19,7 +19,7 @@ tasks {
         archiveClassifier.set("all")
         from(kotlin.jvm().compilations.getByName("main").output)
         configurations =
-            mutableListOf(kotlin.jvm().compilations.getByName("main").compileDependencyFiles as Configuration)
+            mutableListOf(kotlin.jvm().compilations.getByName("main").compileDependencyFiles )
     }
     val build by existing {
         dependsOn(shadowCreate)

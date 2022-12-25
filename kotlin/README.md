@@ -5,7 +5,7 @@
 ### Native
 
 #### Command line
-Run this command from the `advent-of-code/kotlin-native` directory
+Run this command from the `advent-of-code/kotlin` directory
 
 `./gradlew runDebugExecutableNative`
 
@@ -18,7 +18,7 @@ Open the project:
 ### JVM
 
 #### Command line
-Run this command from the `advent-of-code/kotlin-native` directory
+Run this command from the `advent-of-code/kotlin` directory
 
 `./gradlew shadowCreate`
 
