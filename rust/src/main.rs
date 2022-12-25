@@ -33,7 +33,7 @@ fn get_mode() -> Mode {
         .arg(Arg::with_name("year")
             .takes_value(true)
             .multiple(false)
-            .validator(|value| value.parse::<usize>().and_then(|num| Ok(num >= 2015 && num <= 2020)).map(|_| ()).map_err(|_| String::from("Must be 2015..=2020")))
+            .validator(|value| value.parse::<usize>().and_then(|num| Ok(num >= 2015 && num <= 2022)).map(|_| ()).map_err(|_| String::from("Must be 2015..=2022")))
             .requires("day"))
         .arg(Arg::with_name("day")
             .takes_value(true)
@@ -56,7 +56,7 @@ pub fn run(resources: &Resources, year: usize, day: usize) -> AoCResult {
     match year {
         2015 => run_2015(resources, day),
         2016 => run_2016(resources, day),
-        2015..=2020 => Ok(None),
+        2015..=2022 => Ok(None),
         _ => unimplemented!()
     }
 }

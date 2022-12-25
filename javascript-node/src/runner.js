@@ -1,7 +1,7 @@
 const resources = require("./resources");
 
 module.exports = function(run) {
-    for (let year = 2015; year <= 2020; year++) {
+    for (let year = 2015; year <= 2022; year++) {
         console.log(`\n\n${year}\n`);
         for (let day = 1; day <= 25; day++) {
             let result = runDay(run, year, day);

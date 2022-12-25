@@ -2,7 +2,6 @@ import y2015.run2015
 import y2016.run2016
 
 fun start(args: Array<String>) {
-//    runSpecific(2015, 1)
     when (val mode = getMode(args)) {
         Mode.All -> runAll()
         is Mode.Specific -> runSpecific(mode.year, mode.day)
@@ -20,8 +19,8 @@ fun getMode(args: Array<String>): Mode {
         val day = args[1].toIntOrNull()
 
         return if (year != null && day != null) {
-            if (year < 2015 || year > 2020 || day < 0 || day > 25) {
-                throw IllegalArgumentException("Year must be in 2015..2020 and day must be in 1..25")
+            if (year < 2015 || year > 2022 || day < 0 || day > 25) {
+                throw IllegalArgumentException("Year must be in 2015..2022 and day must be in 1..25")
             } else {
                 Mode.Specific(year, day)
             }
@@ -39,7 +38,7 @@ fun run(year: Int, day: Int): Pair<String, String>? {
     return when (year) {
         2015 -> run2015(day)
         2016 -> run2016(day)
-        in 2017..2020 -> null
+        in 2017..2022 -> null
         else -> throw IllegalArgumentException("Invalid year $year")
     }
 }

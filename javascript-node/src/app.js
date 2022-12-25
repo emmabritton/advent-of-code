@@ -25,6 +25,8 @@ function run(year, day) {
         case 2018:
         case 2019:
         case 2020:
+        case 2021:
+        case 2022:
             return null;
         default:
             throw new Error(`Invalid year ${year}`)
