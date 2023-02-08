@@ -3,7 +3,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
-group = "me.raybritton"
+group = "me.emmabritton"
 version = "1.0"
 
 repositories {
